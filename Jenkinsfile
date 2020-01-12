@@ -10,7 +10,7 @@ pipeline {
       stage('Build') {
          steps {
             checkout scm
-            sh "mvn -Dmaven.test.failure.ignore=true clean package"
+            sh "mvn -Dmaven.test.failure.ignore=true install"
 
          }
 
