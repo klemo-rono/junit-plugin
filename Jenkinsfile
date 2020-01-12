@@ -8,7 +8,7 @@ pipeline {
    stages {
       stage('Build') {
          steps {
-            git scm
+            checkout scm
             sh "mvn -Dmaven.test.failure.ignore=true clean package"
 
          }
